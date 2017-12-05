@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.ty.sharedemo"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".GoodsDetailActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter><!-- 定义一个启动的过滤器 -->
+                <action android:name="android.intent.action.SEND"/> <!--  配置action为发送的类型 -->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/> <!--  定义媒体类型为文本类型 -->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
